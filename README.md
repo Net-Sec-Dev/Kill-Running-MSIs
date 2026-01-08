@@ -31,17 +31,17 @@ Start
  │ Enumerate running processes using Win32_Process
  │
  │ Filter for installer-related processes
- │       ├─ msiexec.exe
- │       ├─ Command line contains .msi
- │       ├─ setup.exe
- │       └─ installer
+ │       ├─> msiexec.exe
+ │       ├─> Command line contains .msi
+ │       ├─> setup.exe
+ │       └─> installer
  │
  │ If matching processes are found
- │       ├─ Iterate through each process
- │       │     ├─ Attempt forced termination
- │       │     └─ Log success or failure
+ │       └─> Iterate through each process
+ │             ├─> Attempt forced termination
+ │             └─> Log success or failure
  │
  │ If no matching processes are found
- │       └─ Log that no installer processes are running
+ │       └─> Log that no installer processes are running
  │
 End ──> Exit 0 (Success)
